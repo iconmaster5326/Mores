@@ -1,0 +1,16 @@
+[
+{
+  "modid": "Mores",
+  "name": "Mores",
+  "description": "MORES",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["iconmaster"],
+  "credits": "MORES",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
