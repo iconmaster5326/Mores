@@ -2,14 +2,16 @@ package com.iconmaster.mores.registry;
 
 import net.minecraft.item.ItemStack;
 
+import com.iconmaster.mores.util.OreColor;
+
 public class OreData {
 	private String name;
-	private int color;
+	private OreColor color;
 	private EnumOreDropType dtype;
 	private EnumOreItemType itype;
 	private ItemStack drop;
 	
-	public OreData(String name,int color, EnumOreItemType itype,EnumOreDropType dtype, ItemStack drop) {
+	public OreData(String name,OreColor color, EnumOreItemType itype,EnumOreDropType dtype, ItemStack drop) {
 		this.name = name;
 		this.color = color;
 		this.itype = itype;
@@ -18,18 +20,22 @@ public class OreData {
 	}
 	
 	public OreData(String name, EnumOreItemType itype) {
-		this(name,0,itype,EnumOreDropType.ITEM,null);
+		this(name,null,itype,EnumOreDropType.ITEM,null);
 	}
 
-	public OreData(String name, int color, EnumOreItemType itype,EnumOreDropType dtype) {
+	public OreData(String name, OreColor color, EnumOreItemType itype,EnumOreDropType dtype) {
 		this(name,color,itype,dtype,null);
+	}
+	
+	public OreData(String name,OreColor color,EnumOreDropType dtype,ItemStack drop) {
+		this(name,color,EnumOreItemType.PREDEFINED,dtype,drop);
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public int getColor() {
+	public OreColor getColor() {
 		return color;
 	}
 
@@ -43,5 +49,9 @@ public class OreData {
 
 	public ItemStack getDrop() {
 		return drop;
+	}
+	
+	public void setDrop(ItemStack item) {
+		this.drop = item;
 	}
 }

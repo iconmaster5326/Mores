@@ -15,4 +15,12 @@ public class OreRegistry {
 		data.add(entry);
 	}
 	
+	public static void addItem(Item item) {
+		items.add(item);
+	}
+	
+	public static void addBlock(Block block) {
+		blocks.add(block);
+	}
+	
 }
