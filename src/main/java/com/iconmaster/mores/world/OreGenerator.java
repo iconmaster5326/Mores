@@ -27,7 +27,7 @@ public class OreGenerator implements IWorldGenerator {
 					byte lsb = lsbArray[i];
 
 					if (msbArray==null) {
-						arr.createBlockMSBArray();
+						arr.setBlockMSBArray(new NibbleArray(lsbArray.length, 4));
 						msbArray = arr.getBlockMSBArray();
 					}
 

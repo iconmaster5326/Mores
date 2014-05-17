@@ -112,9 +112,6 @@ public class Mores
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	loc = new ResourceLocation("mores","assets/mores");
-    	TextureManager tman = Minecraft.getMinecraft().getTextureManager();
-    	tman.bindTexture(loc);
     	proxy.registerBlocks();
     	proxy.registerRenderers();
     	proxy.registerWorldGen();
