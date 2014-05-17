@@ -3,6 +3,7 @@ package com.iconmaster.mores.client.render;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.shader.TesselatorVertexState;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
@@ -30,15 +31,12 @@ public class OreBlockRender implements ISimpleBlockRenderingHandler {
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
 			Block block, int modelId, RenderBlocks renderer) {
 		
-		OreColor c = ((BlockOre)block).data.getColor();
-		
 		renderer.renderStandardBlock(block,x,y,z);
 		((BlockOre) block).switchPass();
-		//renderer.renderStandardBlockWithColorMultiplier(block,x,y,z,c.getR(),c.getG(),c.getB());
-		renderOverlay(renderer, block, x, y, z);
+		boolean flag = renderOverlay(renderer, block, x, y, z);
 		((BlockOre) block).switchPass();
 		
-		return true;
+		return flag;
 	}
 
 	@Override
@@ -131,9 +129,10 @@ public class OreBlockRender implements ISimpleBlockRenderingHandler {
         renderer.renderFaceXPos(block, pass*.01D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 5, 0));
         tessellator.draw();
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
+        
 	}
 	
-	public void renderOverlay(RenderBlocks renderer, Block block, int x, int y, int z) {
+	public boolean renderOverlay(RenderBlocks renderer, Block block, int x, int y, int z) {
         renderer.enableAO = false;
         Tessellator tessellator = Tessellator.instance;
         boolean flag = false;
@@ -226,6 +225,7 @@ public class OreBlockRender implements ISimpleBlockRenderingHandler {
 
             flag = true;
         }
+		return flag;
 	}
 	
 	public void renderFaceXNeg(RenderBlocks renderer, double x , double y, double z, IIcon texture) {

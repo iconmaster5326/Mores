@@ -1,7 +1,7 @@
 package com.iconmaster.mores.registry;
 
 public enum EnumOreItemType {
-	INGOT,GEM,PREDEFINED;
+	INGOT,GEM,DIAMOND,PEARL,PREDEFINED;
 	
 	public static String getPrefixName(EnumOreItemType type) {
 		switch (type) {
@@ -18,6 +18,10 @@ public enum EnumOreItemType {
 			return "Ingot";
 		case GEM:
 			return "Gem";
+		case DIAMOND:
+			return "Diamond";
+		case PEARL:
+			return "Pearl";
 		default:
 			return "";
 		}
