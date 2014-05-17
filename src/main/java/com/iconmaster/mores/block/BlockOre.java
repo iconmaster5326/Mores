@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureManager;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
@@ -27,6 +28,7 @@ public class BlockOre extends Block {
 		super(Material.rock);
 		this.data = data;
 		this.setCreativeTab(Mores.tab);
+		this.setHardness(3.0F);
 	}
 	
 	@Override

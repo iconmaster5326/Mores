@@ -7,9 +7,9 @@ import net.minecraft.item.Item;
 
 public class OreRegistry {
 
-	public static ArrayList<OreData> data = new ArrayList<>();
-	public static ArrayList<Block> blocks = new ArrayList<>();
-	public static ArrayList<Item> items = new ArrayList<>();
+	public static ArrayList<OreData> data = new ArrayList<OreData>();
+	public static ArrayList<Block> blocks = new ArrayList<Block>();
+	public static ArrayList<Item> items = new ArrayList<Item>();
 	
 	public static void RegisterOre(OreData entry) {
 		data.add(entry);
