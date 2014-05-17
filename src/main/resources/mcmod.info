@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["iconmaster"],
   "credits": "MORES",
-  "logoFile": "",
+  "logoFile": "moresLogo.png",
   "screenshots": [],
   "dependencies": []
 }
