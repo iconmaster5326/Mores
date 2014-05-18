@@ -36,6 +36,9 @@ public class ItemOreItem extends Item {
     @SideOnly(Side.CLIENT)
     public int getColorFromItemStack(ItemStack par1ItemStack, int par2)
     {
+		if (data.getItype() == EnumOreItemType.NULL) {
+			return super.getColorFromItemStack(par1ItemStack, par2);
+		}
         return data.getColor().composite();
     }
 }
