@@ -69,6 +69,8 @@ public class Mores
     	OreRegistry.RegisterOre(new OreData("Electrum",new OreColor(255,255,128),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
     	OreRegistry.RegisterOre(new OreData("Invar",new OreColor(230,252,101),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
     	OreRegistry.RegisterOre(new OreData("Rust",new OreColor(110,0,0),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
+    	OreRegistry.RegisterOre(new OreData("Plastic",new OreColor(255,0,128),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
+    	OreRegistry.RegisterOre(new OreData("Asbestos",new OreColor(56,118,74),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
     	
     	OreRegistry.RegisterOre(new OreData("Adamantium",new OreColor(34,234,204),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
     	OreRegistry.RegisterOre(new OreData("Mithril",new OreColor(220,252,248),EnumOreItemType.INGOT,EnumOreDropType.BLOCK));
